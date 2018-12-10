@@ -32,9 +32,6 @@ public class NPCSimplePatrol : MonoBehaviour
     // Use this for initialization
     public void Start()
     {
-        if (Input.GetKey("escape"))
-            Application.Quit();
-
         _navMeshAgent = this.GetComponent<NavMeshAgent>();
 
         if (_navMeshAgent == null)

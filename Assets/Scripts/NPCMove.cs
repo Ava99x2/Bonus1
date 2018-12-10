@@ -24,7 +24,11 @@ public class NPCMove : MonoBehaviour
             SetDestination();
         }
     }
-
+    private void FixedUpdate()
+    {
+        if (Input.GetKey("escape"))
+            Application.Quit();
+    }
     private void SetDestination()
     {
         if (_destination != null)
@@ -32,5 +36,7 @@ public class NPCMove : MonoBehaviour
             Vector3 targetVector = _destination.transform.position;
             _navMeshAgent.SetDestination(targetVector);
         }
+      
     }
+
 }
